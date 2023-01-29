@@ -4,7 +4,7 @@
 
 # Input file with all directories
 input="/home/mlappi/job/bash_scripts/path.txt"
-while IFS= read -r line
+while read -r line
 do
   echo "$line"
   for file in "$line"/*
