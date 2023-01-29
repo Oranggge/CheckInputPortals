@@ -1,13 +1,11 @@
 #!/bin/bash
-# First try to script Check Input Portals - Report
-#
-
-echo "Please type in the directory you want all the files to be listed"
-
-read directory 
-
-for entry in "$directory"/*
+input="/home/mlappi/job/bash_scripts/path.txt"
+while IFS= read -r line
 do
-  echo -n "$entry  " 
-  date -r "$entry"
-done
+  echo "$line"
+  for file in "$line"/*
+  do 
+    echo -n "$file"
+    date -r "$file"
+  done
+done < "$input"
