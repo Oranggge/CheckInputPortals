@@ -8,5 +8,5 @@ while read -r line
 do
   echo "$line"
 #   list all files in reverse time order| exclude all folders | list the first file (first line is ignored)
-    ls -tl "$line"| grep -v ^d| sed -n '2{p;q}'
+    ls -tl "$line"| grep -v ^d| sed -n '2{p;q}' | awk '{print $6,$7,$8,$8,$9}'
 done < "$input"
