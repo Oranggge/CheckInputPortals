@@ -3,7 +3,7 @@
 #
 
 # Input file with all directories
-input="/home/mlappi/job/bash_scripts/path.txt"
+input="/path/to/file.txt"
 while read -r line
 do
   echo "$line"
